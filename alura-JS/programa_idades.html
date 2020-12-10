@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha(){
+
+		document.write("<br><br>");
+	}
+
+	function mostra(frase){ //O que ta rolando é que o parâmetro FRASE funcionou como uma variável. Será exibido pro usuário através do document.write, porém se você não chamar a função mostra com uma frase dentro dos parenteses, vai dar undefined. 
+
+		document.write(frase);
+		pulaLinha()
+	}
+
+	mostra ("Olá pessoal!")
+	
+    var ano = 2016;
+
+	//document.write("Flávio tem " + (ano - 1977) + " anos."); CODIGO DE ANTES DA FUNÇÃO COM PARAMETRO
+	mostra("Flávio tem " + (ano - 1977) + " anos.");
+
+	mostra("Joaquim tem " + (ano - 1996) + " anos.");
+	//document.write("Joaquim tem " + (ano - 1996) + " anos."); CODIGO DE ANTES DA FUNÇÃO COM PARAMETRO
+
+    ano = 2017;
+	mostra("Barney tem " + (ano - 1976) + " anos.");
+	//document.write("Barney tem " + (ano - 1976) + " anos."); CODIGO DE ANTES DA FUNÇÃO COM PARAMETRO
+				   
+</script>

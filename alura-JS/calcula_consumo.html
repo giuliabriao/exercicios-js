@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consumo Combustível</title>
+</head>
+<body>
+    <h3>Álcool ou Gasolina?</h3>
+
+    <script>
+
+        var tanque = 40
+        var caminhoComGasolina = 480
+        var consumoDeGasolina = caminhoComGasolina / tanque
+
+        document.write("O consumo de gasolina, em um tanque de 40 litros, numa distância de 400km é de: " + consumoDeGasolina + "km por litro.");
+        document.write("<br><br>");
+
+        var caminhoComAlcool = 300
+        var consumoDeAlcool = caminhoComAlcool / tanque
+        document.write("Já o consumo de álcool, com a mesma capacidade de tanque, percorrendo 300km, faz " + consumoDeAlcool + "km por litro.");
+
+    </script>
+</body>
+</html>

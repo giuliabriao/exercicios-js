@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inflação</title>
+</head>
+<body>
+
+    <img src="inflacao_alimentos.JPG">
+
+    <script>
+        
+        var tomate24 = 3.3
+        var tomate30 = 4.7
+        var arroz24 = 2.99
+        var arroz30 = 3.25
+        var cenoura24 = 3.99
+        var cenoura30 = 4.14
+
+
+        function pulaLinha(){
+            document.write("<br>")
+        }
+
+        function calcularInflacaoIndividual(valorInicial, valorFinal){
+            
+            pulaLinha()
+            return (valorFinal - valorInicial) / valorInicial * 100
+        }
+
+        document.write("A inflação do tomate é de " + calcularInflacaoIndividual(tomate24, tomate30).toFixed(2) + "%.")
+        document.write("A inflação do arroz é de " + calcularInflacaoIndividual(arroz24, arroz30).toFixed(2) + "%.")
+        document.write("A inflação da cenoura é de " + calcularInflacaoIndividual(cenoura24, cenoura30).toFixed(2) + "%.")
+
+        function calcularMediaInflacao(){
+
+            var inflacaoTomate = calcularInflacaoIndividual(tomate24, tomate30) // Não colocar o toFixed(2) aqui dentro porque ele transforma 
+            var inflacaoArroz = calcularInflacaoIndividual(arroz24, arroz30)    // number em string, logo, coloque apenas no resultado, lá em document.write
+            var inflacaoCenoura = calcularInflacaoIndividual(cenoura24, cenoura30)
+
+            return (inflacaoTomate + inflacaoArroz + inflacaoCenoura) / 3
+        }
+
+        document.write("A média das inflações é de " + calcularMediaInflacao().toFixed(2) + "%.")
+
+        pulaLinha()
+
+        function calcularEstimativaInflacao(valorInicial, valorFinal){
+            
+            pulaLinha()
+            return (valorFinal - valorInicial) / 6
+        }
+
+        document.write("A estimativa de inflação do tomate é de " + calcularEstimativaInflacao(tomate24, tomate30).toFixed(2) + " centavos por dia.")
+        document.write("A estimativa de inflação do arroz é de " + calcularEstimativaInflacao(arroz24, arroz30).toFixed(2) + " centavos por dia.")
+        document.write("A estimativa de inflação da cenoura é de " + calcularEstimativaInflacao(cenoura24, cenoura30).toFixed(2) + " centavos por dia.")
+
+    </script>
+    
+</body>
+</html>
