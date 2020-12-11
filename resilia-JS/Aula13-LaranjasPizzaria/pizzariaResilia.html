@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Resiliat</title>
+</head>
+<body>
+    
+    <script>
+
+        var custoPizza = prompt("Qual o custo da pizza?");
+        var precoPizza = prompt("E por quanto ela é vendida?");
+        var nomePizza = prompt("Qual nome da pizza?");
+        var impostoPizza = 0.089 
+
+        function calcularLucroLiquido (preco, custo){
+            return preco - custo
+        }
+
+        var lucroLiquido = calcularLucroLiquido(precoPizza, custoPizza);
+
+        function calcularImposto (preco, imposto){
+            return preco * imposto
+        }
+
+        var imposto = calcularImposto(precoPizza, impostoPizza);
+
+        document.write("Para a pizza de " + nomePizza + " o lucro líquido é de R$" + lucroLiquido + " e o imposto é de R$" + imposto.toFixed(2) + " reais.");
+
+
+    </script>
+
+</body>
+</html>

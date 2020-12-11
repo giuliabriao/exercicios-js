@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dividindo Laranjas</title>
+</head>
+<body>
+    
+    <script>
+
+        function pulaLinha(){
+            document.write("<br>")
+        }
+
+        function dividirLaranjas(laranjas, pessoas){
+            return laranjas / pessoas
+        }
+
+        var quantLaranjas = prompt("São quantas laranjas?");
+        var quantPessoas = prompt("E quantos vizinhos para dividi-las?");
+        var quantExata = dividirLaranjas(quantLaranjas, quantPessoas);
+
+        document.write("Cada uma das pessoas receberá " + quantExata.toFixed(2) + " laranjas.")
+
+        function restoLaranjas(laranjas,pessoas){
+            return laranjas % pessoas // A porcentagem significa pegar o resto da divisão
+        }
+
+        pulaLinha()
+        var sobraLaranja = restoLaranjas (quantLaranjas,quantPessoas); 
+        document.write("E pro Joselito, vão sobrar " + sobraLaranja + " laranjas.")
+
+    </script>
+
+</body>
+</html>
