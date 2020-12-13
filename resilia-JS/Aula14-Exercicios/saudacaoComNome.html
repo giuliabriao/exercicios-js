@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazendo uma saudação com um nome</title>
+</head>
+<body>
+    
+    <script>
+
+        // Crie uma função que recebe como parâmetro o nome de uma pessoa. Essa
+        //função deve retornar o texto em duas linhas distintas: "Olá {nome}." "Tudo bem {nome}?". Utilize
+        //document.write fora da função para escrever na tela o resultado desta função com os parâmetros
+        //a sua escolha.
+
+        function pulaLinha(){
+            document.write("<br><br>")
+        }
+
+        function saudacao(nome){
+            return "Olá " + nome + ".<br>" + "Tudo bem, " + nome + "?"
+        }
+
+        var name = prompt("Qual seu nome?")
+
+        document.write(saudacao(name))
+
+    </script>
+
+</body>
+</html>

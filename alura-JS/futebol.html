@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+
+<script>
+	
+	function pulaLinha() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+	}
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+
+    var vitorias = parseInt(prompt("Entre com o número de vitórias.")); 
+    var empates = parseInt(prompt("Entre com o número de empates.")); // O prompt transforma tudo em string mas usamos parseInt para transformar em número e isso fazer a conta funcionar
+
+    var pontos = vitorias * 3 + empates
+
+    mostra("Os pontos do seu time é de " + pontos);
+
+    //Como a função prompt sempre retorna o que digitamos no formato texto, ou seja, como um string, 
+    //é uma boa prática sempre convertermos o valor digitado para número quando nossa intenção é ler um número.
+
+    //A função prompt retorna o que digitamos como string e esse retorno é passado para parseInt. 
+    //É esta função que recebe uma string e a converte para número. Agora, como temos dois números ligados, 
+    //não acontecerá mais a concatenação, mas sim a soma.
+
+    if (pontos < 28){
+        mostra("Seu time está pior que o ano passado, porque antes havia feito 28 pontos.")
+    }
+
+    if (pontos > 28){
+        mostra("Seu time está melhor que o ano passado, porque antes havia feito 28 pontos.")
+    }
+
+    if (pontos == 28){
+        mostra("Seu time está igual ao ano passado, porque antes havia feito 28 pontos.")
+    }
+
+    mostra("FIM");
+</script>
