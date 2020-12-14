@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O motorista</title>
+</head>
+<body>
+    
+    <script>
+
+        function podeDirigir(idade, idadePermitida){
+            if (idade >= idadePais){
+                console.log("Você pode dirigir!")
+            } else{
+                console.log("Você não pode dirigir.")
+            }
+        }
+
+        var idade = parseInt(prompt("Qual sua idade? (escreva apenas números)"));
+        var idadePais = 16//anos
+
+        console.log(podeDirigir(idade, idadePais))
+
+    </script>
+
+</body>
+</html>

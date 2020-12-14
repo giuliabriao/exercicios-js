@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Bebidas</title>
+</head>
+<body>
+    
+    <script>
+
+        //faça uma função que exibe no console menu
+        //de bebidas de um restaurante (utilizando console.log), com um item em cada linha: 1-
+        //Refrigerante, 2-Suco, 3-Água. Após isso, receba a escolha do cliente como um número
+        //(utilizando console.log) e mostre no console o item do menu (nome do item) escolhido pelo
+        //cliente. Teste todas as saídas possíveis.
+
+
+        function menu(){
+            console.log("1-Refrigerante\n2-Suco\n3-Água")
+
+            var escolhaCliente = parseInt(prompt("Escreva o nome da bebida escolhida."));
+
+            mostrarItemEscolhido(escolhaCliente);
+        }
+
+        function mostrarItemEscolhido (escolhaCliente){
+
+            switch(escolhaCliente){
+            case 1:
+                console.log("Refrigerante foi escolhido!")
+                break;
+            case 2:
+                console.log("Suco foi escolhido!");
+                break;
+            case 3:
+                console.log("Água foi escolhida!");
+                break;
+            
+            default:
+                console.log("Esta não é uma opção válida, tente novamente!");
+        }
+    }
+
+        menu();
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebedeira</title>
+</head>
+<body>
+    
+    <script>
+
+        function podeBeber(idade, idadePais){
+            if (idade >= idadePais){
+                console.log("Você pode beber!")
+            } else{
+                console.log("Você não pode beber.")
+            }
+        }
+
+        var idade = parseInt(prompt("Qual sua idade? (escreva apenas números)"));
+        var idadePais = 21//anos
+
+        console.log(podeBeber(idade, idadePais))
+
+    </script>
+
+</body>
+</html>
