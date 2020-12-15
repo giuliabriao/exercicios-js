@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decrescendo entre 20 e 0</title>
+</head>
+<body>
+    
+    <script>
+
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+        var numero1 = 20
+
+        while (numero1 >= 0){
+
+            mostra(numero1)
+            numero1 = numero1 - 1
+        }
+
+        mostra("FIM");
+
+    </script>
+
+</body>
+</html>

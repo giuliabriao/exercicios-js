@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<input/>
+<button onclick="verifica()">Veja se acertou meu segredo...</button>
+
+<script>
+
+    var segredo = Math.random(Math.round() * 10)
+
+    var input = document.querySelector("input");
+    input.focus(); //aqui vai deixar o input pronto pra ser escrito assim que recarrega a pag
+
+    function verifica(){
+        
+        if (input.value == segredo){
+            alert("Acertô, mizeravi!")
+        } else{
+            alert("Vish, errô!")
+        }
+    }
+
+    input.value = ""; //aqui é pra limpar o codigo depois que clica em ok no alert, tira o numero que escrevemos antes
+    input.focus(); //ou seja, quando clicar em OK depois de errar, a caixinha já estará lá pronta para digitar, nao vai ser preciso clicar nela pra fazer isso.
+
+</script>

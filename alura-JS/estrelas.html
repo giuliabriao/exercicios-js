@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function mostra(frase){
+        document.write(frase);
+    }
+
+    function pulaLinha(){
+        document.write("<br>");
+    }
+
+    // A ideia é printar na tela 3 linhas de 10 estrelas/asteriscos em cada linha.
+
+    for(var linha = 1; linha <= 3; linha++){
+
+        for(coluna = 1; coluna <= 10; coluna++){
+            document.write("*");
+        }
+
+        pulaLinha();
+    }
+
+</script>

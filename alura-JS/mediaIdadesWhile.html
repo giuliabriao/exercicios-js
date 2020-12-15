@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function mostra(frase){
+        document.write(frase);
+    }
+
+    var quantFamiliares = parseInt(prompt("São quantos familiares?"))
+    var numero = 1;
+    var totalIdades = 0; //precisa ser definida fora do while senao toda vez que rolar repetição do while, vai zerar o processo matematico da media
+
+    while(numero <= quantFamiliares){
+        var idades = parseInt(prompt("Informe a idade dos familiares."));
+        totalIdades = totalIdades + idades;
+        numero++;
+    }                                               //esse while acumula valores que sao pedidos no prompt
+
+    var mediaIdades = totalIdades / quantFamiliares;
+    mostra("A média das idades dos familiares é de " + mediaIdades + " anos.");
+
+</script>
