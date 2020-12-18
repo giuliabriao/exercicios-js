@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<script>
+
+    var arrayNumeros = [];
+    var numeros = parseInt(prompt("Quantos números você vai digitar?")); //usuário fornece o número
+        
+    for(i = 0 ; i <  numeros ; i++){
+            arrayNumeros.push(parseInt(prompt("Digite um número")))  ;
+        }
+    
+    var maior1 = 0;
+    var maior2 = 0;
+    var comprimento = arrayNumeros.length;
+    
+    for(i = 0 ; i < comprimento ; i++){               
+            if(arrayNumeros[i] > maior1 && arrayNumeros[i] != maior1){
+                maior1 = arrayNumeros[i];
+            }             
+        }
+
+    for(i = 0 ; i < comprimento ; i++){
+            if(arrayNumeros[i] > maior2 && arrayNumeros[i] < maior1){
+                 maior2 = arrayNumeros[i];
+             }
+        }
+
+    console.log("O primeiro maior numero é: " + maior1)    
+    console.log("O segundo maior numero é: " + maior2);
+    console.log("A multiplicação dos dois é: "+ maior1 * maior2); 
+
+</script>

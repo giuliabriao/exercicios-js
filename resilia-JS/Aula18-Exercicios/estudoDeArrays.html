@@ -1,0 +1,71 @@
+<script>
+
+// Declaração do array
+var mochila = [ "caneta", "maçã", "papel" ];
+
+
+// Como acessamos o elemento na posição N?
+//
+// nomeDoArray[N-1]
+console.log( "Elemento na 1ª posição:" );
+console.log( mochila[0] );
+console.log( "Elemento na 2ª posição:" );
+console.log( mochila[1] );
+
+// Como substituímos o valor de um elemento
+// do array? Simples! Da mesma forma que
+// atribuímos o valor pra uma variável, mas
+// acessando o elemento do array!
+console.log( "Trocando o primeiro elemento:" );
+
+mochila[0] = "lápis";
+
+// Como ficou o nosso array?
+console.log( mochila );
+
+// E como inserimos um valor no array?
+
+// Para colocarmos no final, usamos o método push!
+console.log( "Colocando no final:" );
+
+mochila.push( "caderno" );
+
+// Como ficou o nosso array?
+console.log( mochila );
+
+// Para colocarmos no início, usamos o método unshift!
+console.log( "Colocando no início:" );
+
+mochila.unshift( "sanduíche natural" );
+
+// Como ficou o nosso array?
+console.log( mochila );
+
+// E para removermos valores do nosso array?
+
+// Para removermos do final, usamos o método pop!
+console.log( "Removendo do final:" );
+
+mochila.pop();
+
+// Como ficou o nosso array?
+console.log( mochila );
+
+// Para removermos no início, usamos o método shift!
+console.log( "Removendo do início:" );
+
+mochila.shift();
+
+// Como ficou nosso array?
+console.log( mochila )
+
+// Beleza, mas como tiramos do meio?
+
+// Primeiro parâmetro: índice para começar a remoção
+// Segundo parâmetro: quantidade de elementos removidos
+mochila.splice( 1, 1 );
+
+// Como ficou nosso array?
+console.log( mochila )
+
+</script>

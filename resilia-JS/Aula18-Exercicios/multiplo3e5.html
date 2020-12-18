@@ -1,0 +1,28 @@
+<meta chasert="UTF-8">
+
+<script>
+
+/* Preciso listar a soma de todos os números naturais múltiplos de 3 e 5 menores que um
+determinado valor passado. Por exemplo, se passarmos 10 como valor, os múltiplos são 3, 5, 6 e
+9: a soma desses múltiplos dá 23. Caso o número passado for negativo, preciso que a função
+retorne 0. */
+
+var numero = parseInt(prompt("Digite um número e receba a soma dos seus múltiplos de 3 e 5"));
+var arrayNumeros = [];
+var soma = 0;
+
+function pegaMultiplos (numero){
+    if(numero < 0){
+            return 0;
+        }
+
+    for (var i = 1; i < numero; i++){
+        if(i % 3 == 0 || i % 5 == 0){
+            arrayNumeros.push(i);
+        }
+    }
+    return arrayNumeros;
+}
+console.log(pegaMultiplos(numero));
+    
+</script>

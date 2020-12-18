@@ -1,0 +1,25 @@
+<meta chasert="UTF-8">
+
+<script>
+
+/*Gente! Eu tenho um array de números e quero fazer uma função para somá-los, mas encontrei
+um problema! O array que eu ganhei tinha números negativos e eu não quero somá-los! Você
+pode me ajudar?*/
+
+    var numeros = parseInt(prompt("Quantos números você quer na sua lista?"));
+    var arrayNumeros = [];
+
+    for(numeros = numeros; numeros > 0; numeros--){
+            arrayNumeros.push(parseInt(prompt("Digite seus números!")));
+        }   
+
+        var soma = 0;
+        
+        for(var i = 0; i < arrayNumeros.length; i++){       
+            if(arrayNumeros[i] > 0){
+                soma = soma + arrayNumeros[i];
+            }
+        }        
+        console.log(soma);
+
+</script>

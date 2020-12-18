@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<script>
+    var soma = 0;
+    var multiplos = [];
+    function pegaMultiplo(numero){
+        if(numero < 0){
+            return 0;
+        }
+        
+        for(var i = 1; i < numero; i++){
+            if(i % 3 == 0 || i % 5 == 0){
+                multiplos.push(i);
+            }
+        }
+
+        console.log("A array com múltiplos é: " + multiplos);
+        somaElementos(multiplos);
+    }
+
+    function somaElementos(arr){
+        for(var i = 0; i < multiplos.length; i++){
+            soma += multiplos[i];
+        }
+
+        console.log("A soma é " + soma);
+    }
+
+    var recebeValor = parseInt(window.prompt("Digite um número"));
+    pegaMultiplo(recebeValor);
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botões e nomes</title>
+</head>
+<body>
+    
+    <!-- <button onclick="clicar()">Quem é?</button> -->
+
+    <script>
+
+//Gerar uma lista de botões a partir de um array de nomes. 
+//Ao clicar no botão, mostar um alerta com o nome do proprio botão.
+
+//Criar um array de nomes;
+        //Criar uma função que cria um botão na página;
+            //Passar por todos os elementos do array;
+                //Para cada elemento, chamar a função de criar botão
+
+
+    var arrayNomes = ["Giulia", "Rebecca", "Rafael", "Leo Corso", "Leo Saboia"];
+    
+    
+        for(i = 0; i < arrayNomes.length; i++){
+            criarBotao(arrayNomes[i])            
+        }
+
+    function criarBotao(nome){
+        document.write("<button onclick='alert(\"" + nome + "\")'>" + nome + "</button>");
+    } 
+
+    </script>
+
+</body>
+</html>
