@@ -7,22 +7,35 @@ determinado valor passado. Por exemplo, se passarmos 10 como valor, os múltiplo
 9: a soma desses múltiplos dá 23. Caso o número passado for negativo, preciso que a função
 retorne 0. */
 
-var numero = parseInt(prompt("Digite um número e receba a soma dos seus múltiplos de 3 e 5"));
-var arrayNumeros = [];
-var soma = 0;
+    var numero = parseInt(prompt("Digite um número e receba a soma dos seus múltiplos de 3 e 5"));
+    var arrayNumeros = [];
+    var soma = 0;
 
-function pegaMultiplos (numero){
-    if(numero < 0){
-            return 0;
-        }
+    function pegaMultiplos(numero){
+        if(numero < 0){
+                return 0;
+            }
 
-    for (var i = 1; i < numero; i++){
-        if(i % 3 == 0 || i % 5 == 0){
-            arrayNumeros.push(i);
+        for (var i = 1; i < numero; i++){
+            if(i % 3 == 0 || i % 5 == 0){
+                arrayNumeros.push(i);
+            }
         }
+        return arrayNumeros;
     }
-    return arrayNumeros;
-}
-console.log(pegaMultiplos(numero));
+
+    console.log(pegaMultiplos(numero));
+
+    function somaNumeros(array){
+        for(var i = 0; i < arrayNumeros.length; i++){
+            soma = soma + arrayNumeros[i];
+            console.log(soma) //coloquei para conferir se estava somando certinho
+        }
+
+        return soma;
+    }
+
+    console.log("A soma desses números é: " + somaNumeros(soma));      
     
+
 </script>

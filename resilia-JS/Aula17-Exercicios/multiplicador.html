@@ -9,13 +9,38 @@
 
     var quantDeNumeros = parseInt(prompt("Quantos números você vai escolher?"));
    
-    var arrayValores = [1,2,3,4];
+    var arrayValores = [];
+    var valor = 0;
 
-    for (var i = 0; i < quantDeNumeros; i++){
-        
-        var valor = parseInt(prompt("Insira um valor"));
-        arrayValores.push(valor);
+
+        for (var i = 0; i < quantDeNumeros; i++){        
+            var valor = parseInt(prompt("Insira um valor"));
+            arrayValores.push(valor);
+        }
+
+    var maior1 = 0;
+    var maior2 = 0;
+    var comprimento = arrayValores.length;
+
+    for(var i = 0; i < comprimento; i++){
+        if(arrayValores[i] > maior1 && arrayValores[i] != maior1){
+            maior1 = arrayValores[i];
+        }
     }
+
+    for(var i = 0; i < comprimento; i++){
+        if(arrayValores[i] > maior2 && arrayValores[i] < maior1){
+            maior2 = arrayValores[i];
+        }
+    }
+
+    console.log("Os valores que você inseriu foram: " + arrayValores);
+    console.log("O primeiro maior número é: " + maior1);
+    console.log("O segundo maior número é: " + maior2);
+    console.log("O resultado da multiplicação dos dois maiores é: " + maior1 * maior2);
+
+
+
 
    /*var maiorzao = 0;
     var maiorzinho = 0;

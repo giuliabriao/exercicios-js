@@ -15,7 +15,6 @@
         var segredos = [];
 
         var numero = 1;
-
         while(numero <= quantidade) {
 
               var numeroAleatorio = sorteia();
@@ -53,11 +52,8 @@
     function verifica() {
 
        var achou = false;
-
        for(var posicao = 0; posicao < segredos.length; posicao++) {
-
               if(input.value == segredos[posicao]) {
-
                      alert("Você ACERTOU!");
                      achou = true;
                      break;
@@ -65,7 +61,6 @@
        }
 
        if(achou == false) {
-
               alert("Você ERROU!");
        }
 
@@ -75,7 +70,6 @@
     }
 
     var button = document.querySelector("button");
-
     button.onclick = verifica;
 
 </script>
