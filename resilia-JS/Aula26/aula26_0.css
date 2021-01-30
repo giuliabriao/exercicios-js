@@ -1,0 +1,33 @@
+*
+{
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.container
+{
+    width: 80%;
+    background-color: lightgray;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+    margin: 0 auto;
+}
+
+.caixinha
+{
+    width: 128px;
+    height: 128px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: green;
+}
+
+#titulo
+{
+    background-color: black;
+    color: yellow;
+}

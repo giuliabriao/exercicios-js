@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botões e nomes</title>
+</head>
+<body>
+
+    <script>
+
+/* Dado um array de nomes, utilize o document.createElement e o document.body.append para refazer a tarefa de criar os botões e adicioná-los 
+na tela a partir desses nomes. Opcional: Ao clicar no botão, mostrar um alert com o nome desse botão */
+
+    var arrayNomes = ["Giulia", "Ana Vitoria Gouveia", "Peter", "Bruno Sampaio"];
+    
+    
+
+    for(var i = 0; i < arrayNomes.length; i++){
+        var botao = document.createElement("button");
+        botao.textContent = arrayNomes[i];
+        document.body.append(botao);
+    }
+
+    </script>
+
+</body>
+</html>

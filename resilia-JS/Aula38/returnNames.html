@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="criarPessoa">Criar pessoa</button>
+    <input type="number" id="quantidade"></input>
+
+
+    <script>
+
+        var button = document.getElementById("criarPessoa");
+        let input = document.getElementById("quantidade");
+
+
+
+        button.addEventListener("click", function () {
+
+            let request = new XMLHttpRequest();
+
+            //elimina a necessidade do Parse.Json
+            request.responseType = 'json'
+
+            request.open("GET", `https://randomuser.me/api/?results=5`);
+
+            // substitui o request.addEventListener( "load", function ()
+            {
+                request.onload = function () {
+
+                    let usuario = request.response;
+                    // printa o objeto na tela
+                    console.log(usuario);
+
+
+                    let arr = usuario.results.map((objeto) => objeto.name.first + " " + objeto.name.last);
+                    // printa o array com nome e sobrenome.
+                    console.log(arr);
+
+
+                    let p = document.createElement("p");
+                    p.textContent = arr;
+                    document.body.append(p);
+                    console.log('rodei');
+                }
+
+                request.send();
+
+            };
+
+            // document.body.append(button); //isso fazia o botao aparecer denovo a cada click, logo é desnecessario
+
+        });
+
+    </script>
+</body>
+
+</html>

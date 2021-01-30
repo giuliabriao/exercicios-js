@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+<script>
+
+// Todos os alunos
+var alunosMatriculados = [ "a", "b", "c", "d", "e" ];
+
+// Presença diária
+var presencaSegunda = [ "b", "d", "e" ];
+var presencaTerca = [ "a", "b", "c" ];
+var presencaQuarta = [ "a", "b", "e" ];
+var presencaQuinta = [ "a", "b", "c", "d" ];
+var presencaSexta = [ "a", "b", "c", "d", "e" ];
+
+var presencaSemana = [presencaSegunda, presencaTerca, presencaQuarta, presencaQuinta, presencaSexta]
+
+function porcentagem (numero, maximo){
+    return (numero / maximo) * 100;
+}
+
+function calculaMediaPresencaSemanal (listaAlunos, listaPresencasDiarias){
+
+    var quantAlunosMatriculados = listaAlunos.length;
+    var quantAulasNaSemana = listaPresencasDiarias.length;
+    var somaPresencas = 0;
+
+    for( var i = 0; i < quantAulasNaSemana; i++){
+        var alunosNoDia = listaPresencasDiarias[i];
+        somaPresencas += porcentagem(alunosNoDia.length, quantAlunosMatriculados); 
+        console.log(somaPresencas)
+    }
+
+    var presencaGeral = somaPresencas / quantAulasNaSemana
+    return presencaGeral
+}
+
+var mediaPresencaSemanal = calculaMediaPresencaSemanal(alunosMatriculados, presencaSemana);
+
+console.log( `Média de presença semanal dos alunos: ${mediaPresencaSemanal}%` );
+
+</script>

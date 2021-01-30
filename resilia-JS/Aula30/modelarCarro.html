@@ -1,0 +1,64 @@
+<meta charset="UTF-8">
+
+<script>
+
+function fabricaCarros(placa, modelo) {
+    return {
+        placa: placa,
+        modelo: modelo,
+        status:  false,
+        tanque: 100,
+        alugar: function() {
+            if(this.status == false ) {
+                this.status = true;
+            } else {
+                console.log("Esse carro já foi alugado");
+            }
+        },
+
+        devolver: function() {
+            if(this.status) {
+                if(this.tanque < 100) {
+                    console.log("Pegue a taxa!");
+                    this.tanque = 100;
+                }
+                this.status = false;
+                console.log("Obrigado por devolver!");
+            }else {
+                console.log("O carro já foi devolvido");
+            }
+        },
+
+        andar: function(andou) {
+            if(this.status) {
+            this.tanque = this.tanque - andou;
+            } else {
+                console.log("O carro está emprestado, não pode andar")
+            }
+        },
+
+        abastecer: function(quantidadeReabastecer) {
+            if(this.tanque + quantidadeReabastecer > 100) {
+                let extra = (this.tanque + quantidadeReabastecer) - 100;
+                console.log(`Você abasteceu e o excedente foi de ${extra}`)
+                this.tanque = 100;
+            } else {
+                this.tanque += quantidadeReabastecer;
+            }
+        }
+    }    
+}
+
+let locadora = [];
+
+function novoCarro(carroNome, modelo, placa) {
+    carroNome = fabricaCarros(modelo, placa);
+    locadora.push(carroNome);
+
+}
+
+novoCarro("meuCarro", "HB20", "ABC1234");
+console.log(locadora);
+
+
+</script>

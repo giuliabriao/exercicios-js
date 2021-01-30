@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+let alunos = [
+    {
+        nome: "aaaaa",
+        idade: 21,
+    },
+    {
+        nome: "bbbbb",
+        idade: 33,
+    },
+    {
+        nome: "ccccc",
+        idade: 42,
+    },
+    {
+        nome: "ddddd",
+        idade: 18,
+    },
+    {
+        nome: "eeeee",
+        idade: 26,
+    },
+    {
+        nome: "fffff",
+        idade: 27,
+    },
+    {
+        nome: "ggggg",
+        idade: 32,
+    },
+]
+
+let valorInicial = 0;
+let soma = alunos.reduce(
+    (acumulador , valorAtual) => (acumulador + valorAtual.idade) / alunos.length, valorInicial);
+
+console.log(soma);
+
+    </script>
+</body>
+</html>

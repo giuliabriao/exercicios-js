@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<script>
+
+function calculate(number1, operador, number2){
+    switch(operador){
+        case "+":
+            return number1 + number2;
+        case "-":
+            return number1 - number2;
+        case "*":
+            return number1 * number2;
+        case "/":{
+            if(number2 == 0){
+                return null
+            }
+            return number1 / number2;
+        }        
+        default:
+            return null
+    }    
+}
+    console.log(calculate(1, "+", 2));
+    console.log(calculate(456, "+", 789));
+    console.log(calculate(45, "-", 87));
+    console.log(calculate(452, "*", 945));
+    console.log(calculate(343, "/", 0));
+    console.log(calculate(90, "/", 9));
+
+</script>

@@ -1,0 +1,53 @@
+<meta charset="UTF-8">
+<script>
+    // Todos os alunos
+    var alunosMatriculados = [ "a", "b", "c", "d", "e" ];
+
+    // Presença diária
+    var presencaSegunda = [ "b", "d", "e" ];
+    var presencaTerca = [ "a", "b", "c" ];
+    var presencaQuarta = [ "a", "b", "e" ];
+    var presencaQuinta = [ "a", "b", "c", "d" ];
+    var presencaSexta = [ "a", "b", "c", "d", "e" ];
+
+    // Array de listas de presença
+    var presencaNaSemana = [ presencaSegunda, presencaTerca, presencaQuarta, presencaQuinta, presencaSexta ];
+
+    // Função para calcular porcentagem (melhor legibilidade)
+    function porcentagem( numero, maximo )
+    {
+        return ( numero / maximo ) * 100;
+    }
+
+    // Calcula a média da porcentagem de presenças de aulas da semana
+    function calculaMediaPresencaSemanal (listaAlunos, listaPresencasDiarias){
+        // Quantidade de alunos matriculados na turma
+        var qtdAlunosMatriculados = listaAlunos.length;
+
+        // Quantidade de aulas da semana
+        var qtdAulasNaSemana = listaPresencasDiarias.length;
+
+        // Soma da porcentagem de presenças da aula
+        var somaPresencas = 0;
+
+        // Passa por todos os dias da semana
+        for (var i = 0; i < qtdAulasNaSemana; i++){
+            // Acessa lista de alunos do dia
+            var alunosNoDia = listaPresencasDiarias[i];
+
+            // Soma a porcentagem de presença passando a quantidade de alunos presentes no dia e quantidade de alunos matriculados
+            somaPresencas = somaPresencas + porcentagem(alunosNoDia.length, qtdAlunosMatriculados);
+        }
+        
+        // Calcula a média das presenças;
+        var presencaGeral = somaPresencas / qtdAulasNaSemana;
+
+        return presencaGeral;
+    }
+
+    // Calcula as presenças
+    var mediaPresencaSemanal = calculaMediaPresencaSemanal(alunosMatriculados, presencaNaSemana);
+
+    // Mostra no console
+    console.log( `Média de presença semanal dos alunos: ${mediaPresencaSemanal}%` ); //Usou template string
+</script>

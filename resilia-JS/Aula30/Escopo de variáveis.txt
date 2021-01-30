@@ -1,0 +1,10 @@
+O que é escopo de uma variável?
+
+Quando nos referimos a escopo de variável estamos se referindo a qual local de nosso código uma determinada variável pode ser acessada. No JavaScript existem somente dois tipos de escopos, que são eles, escopo global e local.
+
+Uma variável global é definida quando declaramos uma variável fora de qualquer função, assim ela torna acessível a qualquer parte da nossa aplicação ou site, podendo ser lida e alterada
+
+Uma variável se torna local quando ela é declarada dentro de uma função, de tal maneira a qual ela somente estará acessível dentro dessa função.
+
+CONST, LET E VAR
+

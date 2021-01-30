@@ -1,0 +1,30 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+    border: 0 0;
+}
+
+button{
+    height: 25px;
+}
+
+.user{
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 5px;
+    width: auto;
+    height: fit-content;
+    background-color: rgb(200,200,255);
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+body{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+}
